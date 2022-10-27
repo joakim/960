@@ -3,7 +3,7 @@
 	"short_name": "960",
 	"theme_color": "#aea499",
 	"background_color": "#cedce8",
-	"display": "minimal-ui",
+	"display": "fullscreen",
 	"scope": "/",
 	"start_url": "/",
 	"icons": [

@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-		<meta name="description" content="Chess960 (Fischer random chess) randomizer" />
-		<meta name="keywords" content="chess, chess960, fischer, random, randomizer, generator, drawing, arrangements, starting poitions, ids">
 
-		<!-- Android  -->
-		<meta name="theme-color" content="#42a5f5">
-		<meta name="mobile-web-app-capable" content="yes">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <meta name="description" content="Chess960 randomizer (Fischer random chess)" />
+  <meta name="keywords"
+    content="chess, chess960, fischer, random, randomizer, generator, drawing, arrangements, starting poitions, ids">
 
-		<!-- iOS -->
-		<meta name="apple-mobile-web-app-title" content="960">
-		<meta name="apple-mobile-web-app-capable" content="yes">
+  %sveltekit.head%
 
-		<!-- Windows  -->
-		<meta name="msapplication-TileColor" content="#42a5f5">
-		<meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+  <!-- Android  -->
+  <meta name="theme-color" content="#42a5f5">
+  <meta name="mobile-web-app-capable" content="yes">
 
-		<!-- Pinned Sites  -->
-		<meta name="application-name" content="960">
-		<meta name="msapplication-tooltip" content="Chess960 randomizer">
-		<meta name="msapplication-starturl" content="/">
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-title" content="960">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-		<link rel="icon" sizes="512x512" href="icons/icon-512x512.png">
-		<link rel="icon" sizes="384x384" href="icons/icon-384x384.png">
-		<link rel="icon" sizes="192x192" href="icons/icon-192x192.png">
-		<link rel="icon" sizes="152x152" href="icons/icon-152x152.png">
-		<link rel="icon" sizes="144x144" href="icons/icon-144x144.png">
-		<link rel="icon" sizes="128x128" href="icons/icon-128x128.png">
-		<link rel="icon" sizes="96x96"   href="icons/icon-96x96.png">
-		<link rel="icon" sizes="72x72"   href="icons/icon-72x72.png">
-		<link rel="icon" sizes="48x48"   href="icons/icon-48x48.png">
-		<link rel="icon" href="icons/icon-192x192.png">
-		<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512x512.png">
-		<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+  <!-- Windows  -->
+  <meta name="msapplication-TileColor" content="#42a5f5">
+  <meta name="msapplication-TileImage" content="%sveltekit.assets%/icons/icon-144x144.png">
 
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-prefetch>
-		<div>%sveltekit.body%</div>
-	</body>
+  <!-- Pinned Sites  -->
+  <meta name="application-name" content="960">
+  <meta name="msapplication-tooltip" content="Chess960 randomizer">
+  <meta name="msapplication-starturl" content="/">
+
+  <link rel="manifest" href="%sveltekit.assets%/site.webmanifest">
+
+  <!-- Icons -->
+  <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+  <link rel="icon" href="%sveltekit.assets%/icons/icon-192x192.png">
+  <link rel="icon" sizes="512x512" href="%sveltekit.assets%/icons/icon-512x512.png">
+  <link rel="icon" sizes="384x384" href="%sveltekit.assets%/icons/icon-384x384.png">
+  <link rel="icon" sizes="192x192" href="%sveltekit.assets%/icons/icon-192x192.png">
+  <link rel="icon" sizes="152x152" href="%sveltekit.assets%/icons/icon-152x152.png">
+  <link rel="icon" sizes="144x144" href="%sveltekit.assets%/icons/icon-144x144.png">
+  <link rel="icon" sizes="128x128" href="%sveltekit.assets%/icons/icon-128x128.png">
+  <link rel="icon" sizes="96x96" href="%sveltekit.assets%/icons/icon-96x96.png">
+  <link rel="icon" sizes="72x72" href="%sveltekit.assets%/icons/icon-72x72.png">
+  <link rel="icon" sizes="48x48" href="%sveltekit.assets%/icons/icon-48x48.png">
+  <link rel="apple-touch-icon-57x57" sizes="57x57" href="%sveltekit.assets%/icons/icon-57x57.png">
+  <link rel="apple-touch-icon-72x72" sizes="72x72" href="%sveltekit.assets%/icons/icon-72x72.png">
+  <link rel="apple-touch-icon-76x76" sizes="76x76" href="%sveltekit.assets%/icons/icon-76x76.png">
+  <link rel="apple-touch-icon-114x114" sizes="114x114" href="%sveltekit.assets%/icons/icon-114x114.png">
+  <link rel="apple-touch-icon-120x120" sizes="120x120" href="%sveltekit.assets%/icons/icon-120x120.png">
+  <link rel="apple-touch-icon-144x144" sizes="144x144" href="%sveltekit.assets%/icons/icon-144x144.png">
+  <link rel="apple-touch-icon-152x152" sizes="152x152" href="%sveltekit.assets%/icons/icon-152x152.png">
+  <link rel="apple-touch-icon-167x167" sizes="167x167" href="%sveltekit.assets%/icons/icon-167x167.png">
+  <link rel="apple-touch-icon-180x180" sizes="180x180" href="%sveltekit.assets%/icons/icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/icons/icon-180x180.png">
+</head>
+
+<body data-sveltekit-prefetch>
+  <div>%sveltekit.body%</div>
+</body>
+
 </html>
