@@ -10,11 +10,3 @@
 	#{id}
 	<!-- <a href="/{id}"></a> -->
 </div>
-
-<style>
-	.id {
-		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
-	}
-</style>

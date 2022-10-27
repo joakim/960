@@ -42,6 +42,13 @@
 			height: auto !important;
 		}
 	}
+	:global(.id) {
+		position: fixed;
+		bottom: 1rem;
+		width: 20vw;
+		left: 40vw;
+		text-align: center;
+	}
 	main {
 		display: block;
 	}

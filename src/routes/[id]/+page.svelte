@@ -36,11 +36,3 @@
 		Not sure which to pick? <button on:click={() => goto('/')}>Pick random</button>
 	</p>
 {/if}
-
-<style>
-	.id {
-		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
-	}
-</style>
