@@ -1,10 +1,15 @@
 <script lang="ts">
-	import './styles.css';
+	import { browser } from '$app/environment';
 	import github from '$lib/images/github.svg';
+	import randomize from '$lib/images/randomize.svg';
+	import './styles.css';
+
+	const reload = async () => browser && window.location.reload();
 </script>
 
+<svelte:window on:keydown={({ code }) => code === 'KeyR' && reload()} />
 <svelte:head>
-	<title>960</title>
+	<title>960 randomizer</title>
 </svelte:head>
 
 <main>
@@ -12,8 +17,11 @@
 </main>
 
 <footer>
-	<a href="https://github.com/joakim/960" title="by joakim">
+	<a href="https://github.com/joakim/960" title="by joakim" class="github">
 		<img src={github} alt="GitHub" />
+	</a>
+	<a data-sveltekit-reload href="/" title="Randomize" class="randomize">
+		<img src={randomize} alt="Randomize" />
 	</a>
 </footer>
 
@@ -54,12 +62,25 @@
 	}
 	footer {
 		position: fixed;
-		bottom: 1rem;
-		left: 1rem;
+		bottom: 0.5rem;
+		left: 0.5rem;
+	}
+	footer a {
+		display: block;
+		height: 2rem;
+		width: 2rem;
+		bottom: 0.5rem;
+		position: fixed;
+	}
+	footer .github {
+		left: 0.5rem;
+	}
+	footer .randomize {
+		right: 0.5rem;
 	}
 	footer img {
-		width: 2em;
-		height: 2em;
+		width: 2rem;
+		height: 2rem;
 		object-fit: contain;
 	}
 </style>
