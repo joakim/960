@@ -1,38 +1,16 @@
-# create-svelte
+# 960
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Fischer random chess starting position randomizer based on my [fischer960](https://github.com/joakim/fischer960) library.
 
-## Creating a project
+This was hacked together relatively quickly and the code base has not been cleaned up. I couldn't get SvelteKit to run on Fly.io, so it just builds a static SPA for now. But it was made to run with Node.js and accept URLs like https://960.fly.dev/518. PRs are welcome!
 
-If you're seeing this, you've probably already done this step. Congrats!
+Built with [SvelteKit](https://kit.svelte.dev/), using [svelte-canvas](https://github.com/dnass/svelte-canvas) to render a 2D chessboard.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Deployed to [Fly.io](https://fly.io/) to get this nifty URL: https://960.fly.dev/
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
+### [License](/LICENSE)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This is free and unencumbered software released into the public domain.
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Chess piece images are licensed under the [Creative Commons Attribution-Share Alike 3.0 Unported](https://en.wikipedia.org/wiki/en:Creative_Commons) license by [Cburnett](https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces).

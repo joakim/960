@@ -1,53 +1,59 @@
-<script>
-	import Header from './Header.svelte';
+<script lang="ts">
 	import './styles.css';
+	import github from '$lib/images/github.svg';
 </script>
 
-<div class="app">
-	<Header />
+<svelte:head>
+	<title>960</title>
+	<meta name="description" content="Fischer Random Chess 960 arrangement drawing utility" />
+</svelte:head>
 
-	<main>
-		<slot />
-	</main>
+<main>
+	<slot />
+</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
+<footer>
+	<a href="https://github.com/joakim/960" title="by joakim">
+		<img src={github} alt="GitHub" />
+	</a>
+</footer>
 
 <style>
-	.app {
+	:global(body) {
 		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
+		align-content: center;
 	}
-
-	footer a {
-		font-weight: bold;
+	:global(canvas) {
+		box-shadow: 0.25rem 0.25rem 1rem #666;
+		border-radius: 0.25rem;
 	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
+	@media (orientation: landscape) {
+		:global(canvas) {
+			width: auto !important;
+			height: 80vh !important;
 		}
+	}
+	@media (orientation: portrait) {
+		:global(canvas) {
+			width: 80vw !important;
+			height: auto !important;
+		}
+	}
+	main {
+		display: block;
+	}
+	footer {
+		position: fixed;
+		bottom: 1rem;
+		left: 1rem;
+	}
+	footer img {
+		width: 2em;
+		height: 2em;
+		object-fit: contain;
 	}
 </style>
