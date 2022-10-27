@@ -1,8 +1,23 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import github from '$lib/images/github.svg';
-	import randomize from '$lib/images/randomize.svg';
 	import './styles.css';
+
+	const images = [
+		'/images/Chess_kdt45.svg',
+		'/images/Chess_qdt45.svg',
+		'/images/Chess_rdt45.svg',
+		'/images/Chess_bdt45.svg',
+		'/images/Chess_ndt45.svg',
+		'/images/Chess_pdt45.svg',
+		'/images/Chess_klt45.svg',
+		'/images/Chess_qlt45.svg',
+		'/images/Chess_rlt45.svg',
+		'/images/Chess_blt45.svg',
+		'/images/Chess_nlt45.svg',
+		'/images/Chess_plt45.svg',
+		'/images/github.svg',
+		'/images/randomize.svg'
+	];
 
 	const reload = async () => browser && window.location.reload();
 </script>
@@ -10,6 +25,9 @@
 <svelte:window on:keydown={({ code }) => code === 'KeyR' && reload()} />
 <svelte:head>
 	<title>960 randomizer</title>
+	{#each images as image}
+		<link rel="preload" as="image" href={image} />
+	{/each}
 </svelte:head>
 
 <main>
@@ -18,10 +36,10 @@
 
 <footer>
 	<a href="https://github.com/joakim/960" title="by joakim" class="github">
-		<img src={github} alt="GitHub" />
+		<img src="/images/github.svg" alt="GitHub" />
 	</a>
 	<a data-sveltekit-reload href="/" title="Randomize" class="randomize">
-		<img src={randomize} alt="Randomize" />
+		<img src="/images/randomize.svg" alt="Randomize" />
 	</a>
 </footer>
 

@@ -1,35 +1,22 @@
 <script context="module" lang="ts">
 	import { browser } from '$app/environment';
 
-	import kd from '$lib/images/Chess_kdt45.svg';
-	import qd from '$lib/images/Chess_qdt45.svg';
-	import rd from '$lib/images/Chess_rdt45.svg';
-	import bd from '$lib/images/Chess_bdt45.svg';
-	import nd from '$lib/images/Chess_ndt45.svg';
-	import pd from '$lib/images/Chess_pdt45.svg';
-	import kl from '$lib/images/Chess_klt45.svg';
-	import ql from '$lib/images/Chess_qlt45.svg';
-	import rl from '$lib/images/Chess_rlt45.svg';
-	import bl from '$lib/images/Chess_blt45.svg';
-	import nl from '$lib/images/Chess_nlt45.svg';
-	import pl from '$lib/images/Chess_plt45.svg';
-
 	export type PieceSpec = { name: string; file: number; rank: number };
 	type Images = { [key: string]: string };
 
 	const images: Images = {
-		kd,
-		qd,
-		rd,
-		bd,
-		nd,
-		pd,
-		kl,
-		ql,
-		rl,
-		bl,
-		nl,
-		pl
+		kd: '/images/Chess_kdt45.svg',
+		qd: '/images/Chess_qdt45.svg',
+		rd: '/images/Chess_rdt45.svg',
+		bd: '/images/Chess_bdt45.svg',
+		nd: '/images/Chess_ndt45.svg',
+		pd: '/images/Chess_pdt45.svg',
+		kl: '/images/Chess_klt45.svg',
+		ql: '/images/Chess_qlt45.svg',
+		rl: '/images/Chess_rlt45.svg',
+		bl: '/images/Chess_blt45.svg',
+		nl: '/images/Chess_nlt45.svg',
+		pl: '/images/Chess_plt45.svg'
 	};
 </script>
 
