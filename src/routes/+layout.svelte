@@ -5,7 +5,6 @@
 
 <svelte:head>
 	<title>960</title>
-	<meta name="description" content="Fischer Random Chess 960 arrangement drawing utility" />
 </svelte:head>
 
 <main>
