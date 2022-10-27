@@ -1,4 +1,6 @@
 <script context="module" lang="ts">
+	import { browser } from '$app/environment';
+
 	import kd from '$lib/images/Chess_kdt45.svg';
 	import qd from '$lib/images/Chess_qdt45.svg';
 	import rd from '$lib/images/Chess_rdt45.svg';
@@ -40,10 +42,13 @@
 	export let impatient = false;
 
 	// Ensure image is loaded before showing piece
+	let image: HTMLImageElement;
 	let loaded = false;
-	const image = new Image(100, 100);
-	image.src = images[spec.name];
-	$: image.onload = () => (loaded = true);
+	if (browser) {
+		image = new Image(100, 100);
+		image.src = images[spec.name];
+	}
+	$: if (image) image.onload = () => (loaded = true);
 
 	const pawn = spec.rank === 1 || spec.rank === 6;
 
