@@ -36,12 +36,19 @@
 	);
 
 	let impatient = false;
-	const skip = () => (impatient = true);
+	const skip = (event: Event) => {
+		if (event.type == 'click' || (event.type == 'keydown' && event.code == 'Space')) {
+			impatient = true;
+			event.stopPropagation();
+		}
+	};
 </script>
 
-<svelte:window on:keypress={skip} />
+<svelte:window on:keydown={skip} />
 
-<div on:keypress={skip} on:click={skip}>
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+<!-- svelte-ignore a11y-positive-tabindex -->
+<div tabindex="1" on:keydown={skip} on:click={skip}>
 	<Canvas {width} {height}>
 		{arrangement.join(' ')} ({id})
 		<Board />
