@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { isValidID } from 'fischer960';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -7,8 +7,7 @@
 	const id = Number($page.params.id);
 	const valid = isValidID(id);
 
-	let selected;
-	const go = () => (window.location.href = selected);
+	let selected: string;
 </script>
 
 {#if valid}
@@ -26,7 +25,7 @@
 		>.
 	</p>
 	<p>
-		Pick a starting position: <select bind:value={selected} on:change={go}>
+		Pick a starting position: <select bind:value={selected} on:change={() => goto(selected)}>
 			{#each Array(960) as _, id}
 				<option value={id}>{id}</option>
 			{/each}
